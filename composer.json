@@ -3,16 +3,22 @@
 	"type": "project",
 	"description": "Temma skeleton app for API projects",
 	"homepage": "https://www.temma.net/",
+	"keywords": [
+		"framework",
+		"php",
+		"mvc",
+		"api"
+	],
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Temma Community",
-			"homepage": "https://www.temma.net/"
+			"name": "Amaury Bouchard",
+			"email": "amaury@amaury.net"
 		}
 	],
 	"require": {
 		"php": ">=8.0",
-		"digicreon/temma-lib": "2.10.0"
+		"digicreon/temma-lib": "^2.10.0"
 	},
 	"config": {
 		"platform-check": true,
@@ -22,10 +28,11 @@
 		"post-create-project-cmd": [
 			"chmod +x bin/comma",
 			"chmod 777 log tmp",
-			"ln -s vendor/digicreon/temma-lib/lib/smarty-plugins lib/smarty-plugins"
+			"ln -s ../vendor/digicreon/temma-lib/lib/smarty-plugins lib/smarty-plugins"
 		]
 	},
 	"support": {
+		"docs": "https://www.temma.net/",
 		"source": "https://github.com/Digicreon/Temma",
 		"forum": "https://github.com/Digicreon/discussions",
 		"issues": "https://github.com/Digicreon/Temma/issues"
