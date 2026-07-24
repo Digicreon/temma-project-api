@@ -25,10 +25,18 @@
 		"sort-packages": true
 	},
 	"scripts": {
+		"temma-skills-sync": "@php -r \"file_exists('vendor/digicreon/temma-lib/skills/sync.php') && include('vendor/digicreon/temma-lib/skills/sync.php');\"",
 		"post-create-project-cmd": [
 			"chmod +x bin/comma",
 			"chmod 777 log tmp",
-			"ln -s ../vendor/digicreon/temma-lib/lib/smarty-plugins lib/smarty-plugins"
+			"ln -s ../vendor/digicreon/temma-lib/lib/smarty-plugins lib/smarty-plugins",
+			"@temma-skills-sync"
+		],
+		"post-install-cmd": [
+			"@temma-skills-sync"
+		],
+		"post-update-cmd": [
+			"@temma-skills-sync"
 		]
 	},
 	"support": {
