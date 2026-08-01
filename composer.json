@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=8.3",
-		"digicreon/temma-lib": "^2.20.0"
+		"digicreon/temma-lib": "^2.22.0"
 	},
 	"config": {
 		"platform-check": true,
